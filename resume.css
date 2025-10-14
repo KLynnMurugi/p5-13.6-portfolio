@@ -1,0 +1,130 @@
+/* Basic styling variables */
+:root {
+  --accent: #046d6b;
+  --bg: #f7f9fa;
+  --card: #ffffff;
+  --muted: #666;
+  --radius: 12px;
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: #0b0b0b;
+  line-height: 1.45;
+}
+
+/* Container for resume content */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: static;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+/* Header layout: image + name */
+.header-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 3rem;
+  align-items: center
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 40%;
+  object-fit: cover;
+  border: 3px solid var(--bg);
+  margin-right: 1rem;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.5rem;
+  align-content: flex-end;
+}
+
+.role {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem
+}
+
+/* Quick navigation links */
+.nav {
+  margin-top: .5rem;
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap
+}
+
+.nav a {
+  font-size: .9rem;
+  text-decoration: none
+}
+
+/* Section titles */
+.section-title {
+  margin: 0 0 .5rem 0;
+  font-size: 1.05rem;
+  padding-bottom: .35rem;
+  border-bottom: 2px solid #eee
+}
+
+/* Experience section styling */
+.experience article {
+  margin-bottom: 1rem
+}
+
+.job-meta {
+  font-size: .9rem;
+  color: var(--muted);
+  margin: 0.25rem 0
+}
+
+/* Skills list styling */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style: none;
+  padding: 0
+}
+
+.skill {
+  background: #eef8f8;
+  padding: .35rem .6rem;
+  border-radius: 6px;
+  font-size: .9rem
+}
+
+/* Footer styles */
+footer {
+  margin-top: 1.25rem;
+  font-size: .9rem;
+  color: var(--muted)
+}

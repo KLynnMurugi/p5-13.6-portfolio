@@ -1,0 +1,242 @@
+/* ==== Variables ==== */
+:root {
+  --accent: #046d6b;
+  --accent-light: #15b5b0;
+  --bg: #f7f9fa;
+  --card: #ffffff;
+  --muted: #666;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ==== Base Styles ==== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: #0b0b0b;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ==== Header ==== */
+.header {
+  background: var(--card);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav a {
+  text-decoration: none;
+  color: #0b0b0b;
+  margin-left: 1rem;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ==== Hero ==== */
+.hero {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.hero h2 {
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  color: #fffae3;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: white;
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent-light);
+  color: white;
+}
+
+/* ==== Projects ==== */
+.projects-section {
+  background: var(--bg);
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.25rem;
+  color: var(--accent);
+}
+
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.project-link {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* ==== Skills ==== */
+.skills-section {
+  background: #f0f8f8;
+  padding: 3rem 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skill {
+  background: white;
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow);
+}
+
+/* ==== Contact ==== */
+.contact {
+  text-align: center;
+  background: var(--card);
+  padding: 3rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 2rem;
+  position: relative;
+}
+
+.footer-bar {
+  height: 6px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 650px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin: 0 auto 1rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    margin: 0.5rem;
+  }
+}
