@@ -226,10 +226,6 @@ footer {
     text-align: center;
   }
 
-  .hero-img {
-    margin: 0 auto 1rem;
-  }
-
   .nav {
     display: flex;
     flex-wrap: wrap;
@@ -238,5 +234,11 @@ footer {
 
   .nav a {
     margin: 0.5rem;
+  }
+
+  .hero-img {
+    width: 140px; 
+    height: 140px;
+    margin: 0 auto 1rem;
   }
 }
